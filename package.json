@@ -1,0 +1,32 @@
+{
+  "name": "@my-project/root",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "private": true,
+  "license": "MIT",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "g:tsc": "cd $INIT_CWD && tsc"
+  },
+  "packageManager": "yarn@3.2.0",
+  "dependencies": {
+    "graphql": "16.3.0",
+    "tslib": "^2.3.1"
+  },
+  "devDependencies": {
+    "typescript": "4.5.5"
+  },
+  "dependenciesMeta": {
+    "@prisma/client@3.11.1": {
+      "unplugged": true
+    },
+    "prisma@3.11.1": {
+      "unplugged": true
+    }
+  }
+}

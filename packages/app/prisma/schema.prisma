@@ -1,0 +1,27 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider        = "prisma-client-js"
+  output          = "../src/@generated/prisma-client-js"
+  binaryTargets   = ["native", "debian-openssl-1.1.x", "linux-arm64-openssl-1.1.x", "linux-musl"]
+}
+
+generator nestgraphql {
+  provider               = "prisma-nestjs-graphql"
+  output                 = "../src/@generated/prisma-nestjs-graphql"
+  fields_Validator_from  = "class-validator"
+  fields_Validator_input = true
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL") 
+}
+
+model User {
+  id Int @default(autoincrement()) @id
+  firstName String
+  middleName String?
+  lastName String
+}

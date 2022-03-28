@@ -1,0 +1,41 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Mutation {
+  createUser(createUserInput: UserCreateInput!): User!
+  removeUser(id: Int!): User!
+  updateUser(id: Int!, updateUserInput: UserUpdateInput!): User!
+}
+
+input NullableStringFieldUpdateOperationsInput {
+  set: String
+}
+
+type Query {
+  user(id: Int!): User!
+  users: [User!]!
+}
+
+input StringFieldUpdateOperationsInput {
+  set: String
+}
+
+type User {
+  firstName: String!
+  id: ID!
+  lastName: String!
+  middleName: String
+}
+
+input UserCreateInput {
+  firstName: String!
+  lastName: String!
+  middleName: String
+}
+
+input UserUpdateInput {
+  firstName: StringFieldUpdateOperationsInput
+  lastName: StringFieldUpdateOperationsInput
+  middleName: NullableStringFieldUpdateOperationsInput
+}

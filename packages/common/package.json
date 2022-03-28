@@ -1,0 +1,13 @@
+{
+  "name": "@my-project/common",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "private": true,
+  "license": "MIT",
+  "main": "dist/src/main.js",
+  "types": "dist/src/main.d.ts",
+  "scripts": {
+    "build": "yarn g:tsc -p tsconfig.json"
+  }
+}
