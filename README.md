@@ -1,6 +1,6 @@
 ## Issue
 
-Can't start nestjs application with Production build - Yarn PnP and `@nestjs/apollo`
+Can't start nestjs application with Production build - Yarn PnP + Workspaces and `@nestjs/apollo`
 
 ## Details of the issue
 
